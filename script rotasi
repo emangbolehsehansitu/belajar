@@ -464,7 +464,7 @@ function takeP()
 end
 
 function dropPick()
-    drop(98,bot:getItemCount(98)-1)
+    getBot():drop(98, getBot():getInventory():findItem(98)-1)
 end
 
 function PickaxeControl()
