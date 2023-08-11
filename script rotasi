@@ -480,7 +480,7 @@ function PickaxeControl()
             sleep(1000)
             if inventory:getItemCount(98) > 1 then
                 join(PickaxeWorld,PickaxeWorldID)
-                bot:drop(98)
+                dropPick()
                 sleep(1000)
             end
             GonWebhook(bot.name.." took the pickaxe rotation starts"..
