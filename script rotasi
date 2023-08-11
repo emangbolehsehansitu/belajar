@@ -464,9 +464,7 @@ function takeP()
 end
 
 function dropPick()
-    bot:sendPacket(2, "action|drop\n|itemID|" .. 98)
-    bot:sendPacket(2, "action|dialog_return\ndialog_name|drop_item\nitemID|" .. 98 .. "|\ncount|" .. inventory:getItemCount(98) - 1)
-    sleep(1000)
+    bot:drop(98)
 end
 
 function PickaxeControl()
