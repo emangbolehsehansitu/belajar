@@ -5,7 +5,7 @@ PackDropWorld = string.upper(PackDropWorld)
 PackDropWorldID = string.upper(PackDropWorldID)
 PickaxeWorld = string.upper(PickaxeWorld)
 PickaxeWorldID = string.upper(PickaxeWorldID)
-bot.move_interval = 250
+bot.move_interval = 235
 bot.collect_range= 4
 bot.auto_collect = false
 function GonWebhook(Shinuqi)
