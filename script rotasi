@@ -573,7 +573,7 @@ while isOwner == true do
                 sleep(1000)
             end
             if inventory:getItemCount(BlockID) >= 150 then
-                if world.name ~= list then
+                if world.name ~= worldpnb then
                     join(worldpnb,FarmWorldID)
                 end
                 TrashTheJunks()
