@@ -592,7 +592,7 @@ while isOwner == true do
                 bot:sendPacket(2, "action|buy\nitem|"..packname)
                 sleep(3000) -- you can change delay
             end
-            if inventory:getItemCount(PackitemID) > PackDropCount then
+            if inventory:getItemCount(PackitemID) == PackDropCount then
                 sleep(1000)
                 Dropf()
                 if world.name ~= list then
