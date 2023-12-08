@@ -401,19 +401,43 @@ function PNB(list)
                 sleep(delayplace)
 	        end
         end
-        if tilealfg(Botx-1,Boty-1).tilefg == 0 then
-	        if bot:isInTile(Botx,Boty) then
-                bot:place(Botx-1,Boty-1,BlockID)
-                sleep(delayplace) 
-	        end
-        end
         if tilealfg(Botx+1,Boty-1).tilefg == 0 then
 	        if bot:isInTile(Botx,Boty) then
                 bot:place(Botx+1,Boty-1,BlockID)
                 sleep(delayplace) 
 	        end
         end
-        while (tilealfg(Botx-1,Boty-1).tilefg ~= 0 or tilealbg(Botx,Boty).tilebg ~= 0) do
+        if tilealfg(Botx-1,Boty-1).tilefg == 0 then
+	        if bot:isInTile(Botx,Boty) then
+                bot:place(Botx-1,Boty-1,BlockID)
+                sleep(delayplace) 
+	        end
+        end
+        while (tilealfg(Botx,Boty-1).tilefg ~= 0 or tilealbg(Botx,Boty).tilebg ~= 0) do
+            Reconnectpnb(list)
+            if BotPxz ~= Botx and BotPyz ~= BotY then
+                bot:findPath(BotPxz,BotPyz)
+                sleep(1000)
+                AnlikYer()
+            end
+	    if bot:isInTile(Botx,Boty) then
+            bot:hit(Botx,Boty-1) 
+            sleep(delaybreak) 
+	    end
+        end
+        while (tilealfg(Botx+1,Boty-1).tilefg ~= 0 or tilealbg(Botx-1,Boty+1).tilebg ~= 0) do
+            Reconnectpnb(list)
+            if BotPxz ~= Botx and BotPyz ~= BotY then
+                bot:findPath(BotPxz,BotPyz)
+                sleep(1000)
+                AnlikYer()
+            end
+	    if bot:isInTile(Botx,Boty) then
+            bot:hit(Botx+1,Boty-1)
+            sleep(delaybreak) 
+	    end
+        end
+        while (tilealfg(Botx-1,Boty-1).tilefg ~= 0 or tilealbg(Botx-1,Boty-1).tilebg ~= 0) do
             Reconnectpnb(list)
             if BotPxz ~= Botx and BotPyz ~= BotY then
                 bot:findPath(BotPxz,BotPyz)
@@ -422,30 +446,6 @@ function PNB(list)
             end
 	    if bot:isInTile(Botx,Boty) then
             bot:hit(Botx-1,Boty-1) 
-            sleep(delaybreak) 
-	    end
-        end
-        while (tilealfg(Botx,Boty-1).tilefg ~= 0 or tilealbg(Botx,Boty-1).tilebg ~= 0) do
-            Reconnectpnb(list)
-            if BotPxz ~= Botx and BotPyz ~= BotY then
-                bot:findPath(BotPxz,BotPyz)
-                sleep(1000)
-                AnlikYer()
-            end
-	    if bot:isInTile(Botx,Boty) then
-            bot:hit(Botx,Boty-1)
-            sleep(delaybreak) 
-	    end
-        end
-        while (tilealfg(Botx+1,Boty-1).tilefg ~= 0 or tilealbg(Botx+1,Boty-1).tilebg ~= 0) do
-            Reconnectpnb(list)
-            if BotPxz ~= Botx and BotPyz ~= BotY then
-                bot:findPath(BotPxz,BotPyz)
-                sleep(1000)
-                AnlikYer()
-            end
-	    if bot:isInTile(Botx,Boty) then
-            bot:hit(Botx+1,Boty-1) 
             sleep(delaybreak) 
 	    end
         end
