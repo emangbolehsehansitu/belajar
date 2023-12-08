@@ -425,7 +425,7 @@ function PNB(list)
             sleep(delaybreak) 
 	    end
         end
-        while (tilealfg(Botx,Boty-1).tilefg ~= 0 or tilealbg(Botx-1,Boty+1).tilebg ~= 0) do
+        while (tilealfg(Botx,Boty-1).tilefg ~= 0 or tilealbg(Botx,Boty-1).tilebg ~= 0) do
             Reconnectpnb(list)
             if BotPxz ~= Botx and BotPyz ~= BotY then
                 bot:findPath(BotPxz,BotPyz)
@@ -437,7 +437,7 @@ function PNB(list)
             sleep(delaybreak) 
 	    end
         end
-        while (tilealfg(Botx+1,Boty-1).tilefg ~= 0 or tilealbg(Botx-1,Boty-1).tilebg ~= 0) do
+        while (tilealfg(Botx+1,Boty-1).tilefg ~= 0 or tilealbg(Botx+1,Boty-1).tilebg ~= 0) do
             Reconnectpnb(list)
             if BotPxz ~= Botx and BotPyz ~= BotY then
                 bot:findPath(BotPxz,BotPyz)
